@@ -22,5 +22,5 @@ Bonus Points
   Minify files to prevent thieves from stealing my million-dollar code
 
 v1.1 Considerations
-  Fancybox jQuery for displaying cool poppable images
+  FancyBox2 jQuery for displaying cool poppable images
   
