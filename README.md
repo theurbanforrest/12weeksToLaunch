@@ -23,4 +23,4 @@ Bonus Points
 
 v1.1 Considerations
   FancyBox2 jQuery for displaying cool poppable images
-  
+  imagesLoaded jQuery for binding on "all images loaded" event
