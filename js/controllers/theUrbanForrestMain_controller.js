@@ -32,6 +32,10 @@ angular.module('tufApp', [])
 			$scope.counter -= $scope.sum; 
 		};
 
+		$scope.myFirstGitHubChange = function() {
+			$scope.greeting = "This is my First GitHub Branch Modification";
+		};
+
 	});
 
 /*END Define*/
