@@ -1,0 +1,101 @@
+<!--
+STARTER CODE DUMP
+A file to dump all of the starter code
+I went through
+-->
+
+<!--
+Controller.js
+Contains ng-app='tufApp' and ng-controller='tufController'
+Requires Angular
+-->
+<script>
+angular.module('tufApp', [])
+  .controller('tufController', function($scope){
+    $scope.NameChange = function() {
+      $scope.greeting = "Hello " + $scope.name;
+    };
+
+    $scope.AddNumsInit = function() {
+      $scope.sum = 0;
+    };
+    $scope.AddNumbers = function() {
+      var a = Number($scope.a || 0);
+      var b = Number($scope.b || 0);
+      $scope.sum = a+b;
+    };
+
+    $scope.CounterInit = function() {
+      $scope.counter = 0;
+    };
+
+    $scope.CounterIncrement = function() {
+      $scope.counter += $scope.sum;
+    };
+
+    $scope.CounterDecrement = function() {
+      $scope.counter -= $scope.sum; 
+    };
+
+  });
+</script>
+
+<!--
+Index.html
+Contains all views and interactive pieces
+Requires include of Controller.js above
+Requires Bootstrap.css
+-->
+<div 
+  class="container theme-showcase"
+  ng-app="tufApp">
+
+  <div 
+    class="jumbotron"
+    ng-controller="tufController">
+
+    <!--Hello User-->
+    <input ng-model="name" ng-keyup="NameChange()" type="text" placeholder="Your name please">
+    <h1>{{greeting}}</h1>
+    <h2>{{name}}</h2>
+
+    
+
+    <!--Add Two Numbers-->
+    <div 
+      ng-init="AddNumsInit()">
+    </div>
+    <input
+      ng-model="a"
+      ng-keyup="AddNumbers()"
+      type="number"
+      placeholder=0>
+
+    <input
+      ng-model="b"
+      ng-keyup="AddNumbers()"
+      type="number"
+      placeholder=0>
+
+    <h1>{{sum}}</h1>
+
+    <!--Buttons Increment and Decrement-->
+    <div ng-init="CounterInit()">
+    </div>
+
+    <button 
+      class="btn btn-lg btn-primary" 
+      ng-click= "CounterIncrement()">
+       Increment
+    </button>
+
+    <button 
+      class="btn btn-lg btn-info"
+      ng-click= "CounterDecrement()">
+        Decrement
+      </button>
+
+    <h3>{{counter}}</h3>
+
+  </div>
+</div>

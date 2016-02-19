@@ -5,8 +5,8 @@ by fching
 */
 
 /*BEGIN Define angular.module and .controller*/
-angular.module('tufApp', [])
-	.controller('tufController', function($scope){
+angular.module('mainApp', [])
+	.controller('mainController', function($scope){
 		$scope.NameChange = function() {
 			$scope.greeting = "Hello " + $scope.name;
 		};
@@ -14,6 +14,7 @@ angular.module('tufApp', [])
 		$scope.AddNumsInit = function() {
 			$scope.sum = 0;
 		};
+		
 		$scope.AddNumbers = function() {
 			var a = Number($scope.a || 0);
 			var b = Number($scope.b || 0);
@@ -32,11 +33,6 @@ angular.module('tufApp', [])
 			$scope.counter -= $scope.sum; 
 		};
 
-		$scope.myFirstGitHubChange = function() {
-			$scope.greeting = "This is my First GitHub Branch Modification";
-		};
-
 	});
 
 /*END Define*/
-console.log("Main Function complete");
