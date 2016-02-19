@@ -15,7 +15,7 @@
 
   <!-- Include Bootstrap css' -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/example-theme-Theme.css" rel="stylesheet">
+  <link href="css/example-theme-Carousel.css" rel="stylesheet">
 
   <!-- Include js -->
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -31,92 +31,55 @@
   <!-- Run controller.js -->
 <script src="js/controllers/theUrbanForrestMain_controller.js"></script>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+  <!-- UPPER NAV BAR -->
+<div class="navbar-wrapper">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Bootstrap theme</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
+            </div>
+          </div>
+        </nav>
+
       </div>
-    </nav>
-
-<div 
-  class="container theme-showcase"
-  ng-app="tufApp">
-
-  <div 
-    ng-controller="tufController"
-    class="jumbotron">
-
-    <!--Hello User-->
-    <input ng-model="name" ng-keyup="NameChange()" type="text" placeholder="Your name please">
-    <h1>{{greeting}}</h1>
-    <h2>{{name}}</h2>
-
-    
-
-    <!--Add Two Numbers-->
-    <div 
-      ng-init="AddNumsInit()">
-    </div>
-    <input
-      ng-model="a"
-      ng-keyup="AddNumbers()"
-      type="number"
-      placeholder=0>
-
-    <input
-      ng-model="b"
-      ng-keyup="AddNumbers()"
-      type="number"
-      placeholder=0>
-
-    <h1>{{sum}}</h1>
-
-    <!--Buttons Increment and Decrement-->
-    <div ng-init="CounterInit()">
-    </div>
-
-    <button 
-      class="btn btn-lg btn-primary" 
-      ng-click= "CounterIncrement()">
-       Increment
-    </button>
-
-    <button 
-      class="btn btn-lg btn-info"
-      ng-click= "CounterDecrement()">
-        Decrement
-      </button>
-
-    <h3>{{counter}}</h3>
-
-  </div>
 </div>
+
+
+  
+  <!-- 
+  Hello User, Add Numbers, and Increment/Decrement
+  have been moved to starter-code-dump.html
+  -->
+
+  <!-- 
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
