@@ -12,6 +12,10 @@
 
 <body>
 
+  <!-- IMPORT DATA -->
+    <script type="text/javascript" language="javascript"
+    src="section/home/userExperienceData.js"></script>
+
   <!-- UPPER NAV BAR -->
 <div class="navbar-wrapper">
       <div class="container">
@@ -25,23 +29,23 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Project name</a>
+              <a class="navbar-brand" href="#">Project Timeline</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active"><a href="#"><div id="navbar-item0">Home</div></a></li>
+                <li><a href="#about"><div id="navbar-item1">About</div></a></li>
+                <li><a href="#contact"><div id="navbar-item2">Contact</div></a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#"><div id="navbar-dropdown0">Action</div></a></li>
+                    <li><a href="#"><div id="navbar-dropdown1">Another action</div></a></li>
+                    <li><a href="#"><div id="navbar-dropdown2">Something else here</div></a></li>
                     <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                    <li class="dropdown-header"><div id="navbar-dropdown-postdividertitle">Nav header</dive></li>
+                    <li><a href="#"><div id="navbar-dropdown-postdivider0">Separated link</div></a></li>
+                    <li><a href="#"><div id="navbar-dropdown-postdivider1">One more separated link</div></a></li>
                   </ul>
                 </li>
               </ul>
@@ -50,49 +54,6 @@
         </nav>
 
       </div>
-</div>
-
-<!-- NAVBAR
-================================================== -->
-  <body>
-    <div class="navbar-wrapper">
-      <div class="container">
-
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Project name</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-      </div>
-    </div>
 
 
     <!-- Carousel
@@ -233,8 +194,8 @@
   have been moved to starter-code-dump.html
   -->
 
-<!-- Bootstrap core Javascript
-==================================================== -->
+  <!-- Bootstrap core Javascript
+  ==================================================== -->
   <!-- Include css -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -248,8 +209,57 @@
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  
+  <!-- Test if userExperienceData.js replaces nav bar cell appropriately -->
+  <script>
+  $('#navbar-item0').html(dataLayer.navModule.items[0].display);
+  $('#navbar-item1').html(dataLayer.navModule.items[1].display);
+  $('#navbar-item2').html(dataLayer.navModule.items[2].display);
+  $('#navbar-dropdown0').html(dataLayer.navModule.items[4].items[0].display);
+  $('#navbar-dropdown1').html(dataLayer.navModule.items[4].items[1].display);
+  $('#navbar-dropdown2').html(dataLayer.navModule.items[4].items[2].display);
+  $('#navbar-dropdown-postdividertitle').html("This is a new section in the nav!");
+  $('#navbar-dropdown-postdivider0').html(dataLayer.navModule.items[4].items[3].display);
+  $('#navbar-dropdown-postdivider1').html(dataLayer.navModule.items[4].items[4].display);
+  </script>
 
-  <script src="js/main.js"></script>
+  <!-- TEST OUT JSON PARSER -->
+
+  <script>
+
+    $(document).ready(function(e){
+
+      });
+
+    function jsonCallback(jsonObject){
+      alert(jsonObject.start.count);
+    }
+  </script>
+
+<!-- ANALYTICS -->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74507900-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MLWVKS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MLWVKS');</script>
+<!-- End Google Tag Manager -->
+
 </body>
 
 </html>
