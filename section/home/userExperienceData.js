@@ -44,10 +44,25 @@ var dataLayer =
 						id:"dropdown-3",
 						display:"Dropdown 3",
 						target:"#dropdown3"
+					},
+					{
+						id:"dropdown-4",
+						display:"Dropdown 4",
+						target:"#dropdown4"
+					},
+					{
+						id:"dropdown-5",
+						display:"Dropdown 5",
+						target:"#dropdown5"
+					},
+					{
+						id:"dropdown-6",
+						display:"Dropdown 6",
+						target:"#dropdown6"
 					}
 				]
 			}
-		]
+		]	
 	},
 	carouselModule:{
 		items:[
