@@ -239,7 +239,7 @@
     }
   }
   
-  var navModuleData = dataLayer.navModule.items;
+  var navModuleData = navDataFeed.navModule.items;
 
   setTextInDiv(navModuleData,'sitelogo','#navbar-logo');
   setTextInDiv(navModuleData,'home','#navbar-item0');
@@ -258,14 +258,14 @@
   setTextInDiv(navDropDownData,'dropdown5','#navbar-dropdown-postdivider1');
 
 /*
-  $('#navbar-item1').html(dataLayer.navModule.items[1].display);
-  $('#navbar-item2').html(dataLayer.navModule.items[2].display);
-  $('#navbar-dropdown0').html(dataLayer.navModule.items[4].items[0].display);
-  $('#navbar-dropdown1').html(dataLayer.navModule.items[4].items[1].display);
-  $('#navbar-dropdown2').html(dataLayer.navModule.items[4].items[2].display);
+  $('#navbar-item1').html(navDataFeed.navModule.items[1].display);
+  $('#navbar-item2').html(navDataFeed.navModule.items[2].display);
+  $('#navbar-dropdown0').html(navDataFeed.navModule.items[4].items[0].display);
+  $('#navbar-dropdown1').html(navDataFeed.navModule.items[4].items[1].display);
+  $('#navbar-dropdown2').html(navDataFeed.navModule.items[4].items[2].display);
   $('#navbar-dropdown-postdividertitle').html("This is a new section in the nav!");
-  $('#navbar-dropdown-postdivider0').html(dataLayer.navModule.items[4].items[3].display);
-  $('#navbar-dropdown-postdivider1').html(dataLayer.navModule.items[4].items[4].display);
+  $('#navbar-dropdown-postdivider0').html(navDataFeed.navModule.items[4].items[3].display);
+  $('#navbar-dropdown-postdivider1').html(navDataFeed.navModule.items[4].items[4].display);
 */
   </script>
 
@@ -301,9 +301,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+j=d.createElement(s),dl=l!='navDataFeed'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MLWVKS');</script>
+})(window,document,'script','navDataFeed','GTM-MLWVKS');</script>
 <!-- End Google Tag Manager -->
 
 </body>

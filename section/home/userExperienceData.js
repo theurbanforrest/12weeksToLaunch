@@ -1,6 +1,6 @@
 //data for User Experience
 
-var dataLayer = 
+var navDataFeed = 
 {
 	comments: "",
 
