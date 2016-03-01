@@ -240,19 +240,19 @@
   }
   
   var navModuleData = navDataFeed.navModule.items;
+  var navDropDownData = getObject(navModuleData,'dropdown');
 
+  //Nav Bar Visible Elements
   setTextInDiv(navModuleData,'sitelogo','#navbar-logo');
   setTextInDiv(navModuleData,'home','#navbar-item0');
   setTextInDiv(navModuleData,'about','#navbar-item1');
   setTextInDiv(navModuleData,'contact','#navbar-item2');
   setTextInDiv(navModuleData,'dropdown','#navbar-dropdown-title');
 
-  var navDropDownData = getObject(navModuleData,'dropdown');
-
+  //Dropdown Elements
   setTextInDiv(navDropDownData,'dropdown0','#navbar-dropdown0');
   setTextInDiv(navDropDownData,'dropdown1','#navbar-dropdown1');
   setTextInDiv(navDropDownData,'dropdown2','#navbar-dropdown2');
-
   setTextInDiv(navDropDownData,'dropdown3','#navbar-dropdown-postdividertitle');
   setTextInDiv(navDropDownData,'dropdown4','#navbar-dropdown-postdivider0');
   setTextInDiv(navDropDownData,'dropdown5','#navbar-dropdown-postdivider1');
