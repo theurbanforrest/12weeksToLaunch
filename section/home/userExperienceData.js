@@ -31,34 +31,34 @@ var dataLayer =
 				display:"UXData.json Dropdown",
 				items:[
 					{
-						id:"dropdown-1",
+						id:"dropdown0",
+						display:"Dropdown 0",
+						target:"#dropdown0"
+					},
+					{
+						id:"dropdown1",
 						display:"Dropdown 1",
 						target:"#dropdown1"
 					},
 					{
-						id:"dropdown-2",
+						id:"dropdown2",
 						display:"Dropdown 2",
 						target:"#dropdown2"
 					},
 					{
-						id:"dropdown-3",
+						id:"dropdown3",
 						display:"Dropdown 3",
 						target:"#dropdown3"
 					},
 					{
-						id:"dropdown-4",
+						id:"dropdown4",
 						display:"Dropdown 4",
-						target:"#dropdown4"
+						target:"#dropdown4",
 					},
 					{
-						id:"dropdown-5",
+						id:"dropdown5",
 						display:"Dropdown 5",
 						target:"#dropdown5"
-					},
-					{
-						id:"dropdown-6",
-						display:"Dropdown 6",
-						target:"#dropdown6"
 					}
 				]
 			}
