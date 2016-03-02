@@ -1,6 +1,6 @@
 //data for User Experience
 
-var navDataFeed = 
+var uxDataFeed = 
 {
 	comments: "",
 
@@ -67,21 +67,21 @@ var navDataFeed =
 	carouselModule:{
 		items:[
 			{
-				id:"panel-1",
-				headline:"Example",
+				id:"panel-0",
+				headline:"UXData Panel 0",
 				body:"lorem ipsum dolor cras justo",
 				buttonColorHex:"#00FF00",
 				buttonText:"Sign up today"
 			},
 			{
-				id:"panel-2",
+				id:"panel-1",
 				headline:"Another example headline",
 				body:"lorem ipsum dolor cras justo",
 				buttonColorHex:"#FFFFFF",
 				buttonText:"Learn more"
 			},
 			{
-				id:"panel-3",
+				id:"panel-2",
 				headline:"One more for good measure.",
 				body:"lorem ipsum dolor cras justo",
 				buttonColorHex:"#000000",
