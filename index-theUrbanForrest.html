@@ -29,7 +29,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Project Timeline</a>
+              <a class="navbar-brand" href="#"><div id="navbar-logo">Project Timeline</div></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -37,7 +37,7 @@
                 <li><a href="#about"><div id="navbar-item1">About</div></a></li>
                 <li><a href="#contact"><div id="navbar-item2">Contact</div></a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><div id="navbar-dropdown-title">Dropdown</div><span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="#"><div id="navbar-dropdown0">Action</div></a></li>
                     <li><a href="#"><div id="navbar-dropdown1">Another action</div></a></li>
@@ -212,15 +212,61 @@
   
   <!-- Test if userExperienceData.js replaces nav bar cell appropriately -->
   <script>
-  $('#navbar-item0').html(dataLayer.navModule.items[0].display);
-  $('#navbar-item1').html(dataLayer.navModule.items[1].display);
-  $('#navbar-item2').html(dataLayer.navModule.items[2].display);
-  $('#navbar-dropdown0').html(dataLayer.navModule.items[4].items[0].display);
-  $('#navbar-dropdown1').html(dataLayer.navModule.items[4].items[1].display);
-  $('#navbar-dropdown2').html(dataLayer.navModule.items[4].items[2].display);
+
+  function getObject(a,b){
+    //a is the object
+    //b is the target's id
+    //Requires target.items
+    for (var i = a.length - 1; i >= 0; i--) {
+    if(a[i].id == b){
+      console.log(a[i]);
+      return a[i].items;
+      }
+    }
+  }
+
+  function setTextInDiv(a,b,c){
+    //a is the object
+    //b is the target's id
+    //c is the target div
+    //Requires target.display
+    for (var i = a.length - 1; i >= 0; i--) {
+    if(a[i].id == b){
+      $(c).html(a[i].display);
+      console.log(b);
+      return c;
+      }
+    }
+  }
+  
+  var navModuleData = navDataFeed.navModule.items;
+  var navDropDownData = getObject(navModuleData,'dropdown');
+
+  //Nav Bar Visible Elements
+  setTextInDiv(navModuleData,'sitelogo','#navbar-logo');
+  setTextInDiv(navModuleData,'home','#navbar-item0');
+  setTextInDiv(navModuleData,'about','#navbar-item1');
+  setTextInDiv(navModuleData,'contact','#navbar-item2');
+  setTextInDiv(navModuleData,'dropdown','#navbar-dropdown-title');
+
+  //Dropdown Elements
+  setTextInDiv(navDropDownData,'dropdown0','#navbar-dropdown0');
+  setTextInDiv(navDropDownData,'dropdown1','#navbar-dropdown1');
+  setTextInDiv(navDropDownData,'dropdown2','#navbar-dropdown2');
+  setTextInDiv(navDropDownData,'dropdown3','#navbar-dropdown-postdividertitle');
+  setTextInDiv(navDropDownData,'dropdown4','#navbar-dropdown-postdivider0');
+  setTextInDiv(navDropDownData,'dropdown5','#navbar-dropdown-postdivider1');
+
+/*
+  $('#navbar-item1').html(navDataFeed.navModule.items[1].display);
+  $('#navbar-item2').html(navDataFeed.navModule.items[2].display);
+  $('#navbar-dropdown0').html(navDataFeed.navModule.items[4].items[0].display);
+  $('#navbar-dropdown1').html(navDataFeed.navModule.items[4].items[1].display);
+  $('#navbar-dropdown2').html(navDataFeed.navModule.items[4].items[2].display);
   $('#navbar-dropdown-postdividertitle').html("This is a new section in the nav!");
-  $('#navbar-dropdown-postdivider0').html(dataLayer.navModule.items[4].items[3].display);
-  $('#navbar-dropdown-postdivider1').html(dataLayer.navModule.items[4].items[4].display);
+  $('#navbar-dropdown-postdivider0').html(navDataFeed.navModule.items[4].items[3].display);
+  $('#navbar-dropdown-postdivider1').html(navDataFeed.navModule.items[4].items[4].display);
+*/
   </script>
 
   <!-- TEST OUT JSON PARSER -->
@@ -255,9 +301,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+j=d.createElement(s),dl=l!='navDataFeed'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MLWVKS');</script>
+})(window,document,'script','navDataFeed','GTM-MLWVKS');</script>
 <!-- End Google Tag Manager -->
 
 </body>
