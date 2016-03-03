@@ -71,7 +71,7 @@ var uxDataFeed =
 				headline:"UXData Panel 0",
 				body:"lorem ipsum dolor cras justo",
 				buttonColorHex:"#00FF00",
-				buttonText:"Sign up today"
+				buttonText:"Panel 0 Button"
 			},
 			{
 				id:"panel-1",

@@ -22,7 +22,7 @@
     //Requires target.display
     for (var i = a.length - 1; i >= 0; i--) {
     if(a[i].id == b){
-      $(c).html(a[i].display);
+      $(c).text(a[i].display);
       console.log(b);
       return c;
       }
@@ -36,7 +36,7 @@
     //Requires target.headline
     for (var i = a.length - 1; i >= 0; i--) {
     if(a[i].id == b){
-      $(c).html(a[i].headline);
+      $(c).text(a[i].headline);
       console.log(b);
       return c;
       }
@@ -50,7 +50,7 @@
     //Requires target.body
     for (var i = a.length - 1; i >= 0; i--) {
     if(a[i].id == b){
-      $(c).html(a[i].body);
+      $(c).text(a[i].body);
       console.log(b);
       return c;
       }
@@ -96,4 +96,4 @@
 
     setHeadline(carouselData,'panel-0','#carousel-panel-0-headline');
     setBody(carouselData,'panel-0','#carousel-panel-0-body');
-    setButtonText(carouselData,'panel-0','#carousel-panel-0-button-text');
+   setButtonText(carouselData,'panel-0','#carousel-panel-0-button-text');
