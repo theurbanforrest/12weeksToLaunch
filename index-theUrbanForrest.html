@@ -70,18 +70,19 @@
           <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              <h1 id="carousel-panel-0-headline">Example headline.</h1>
+              <p id="carousel-panel-0-body">Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button" id="carousel-panel-0-button-text">Sign up today</a></p>
             </div>
+           <!-- <div id="carousel-panel-0-button-text"></div> -->
           </div>
         </div>
         <div class="item">
           <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1><div id="carousel-panel-1-headline">Another example headline.</div></h1>
+              <p><div id="carousel-panel-1-body">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</div></p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
             </div>
           </div>
@@ -90,8 +91,8 @@
           <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1><div id="carousel-panel-2-headline">One more for good measure.</div></h1>
+              <p><div id="carousel-panel-2-body">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</div></p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
             </div>
           </div>
@@ -211,62 +212,8 @@
   <script src="js/bootstrap.min.js"></script>
   
   <!-- Test if userExperienceData.js replaces nav bar cell appropriately -->
-  <script>
-
-  function getObject(a,b){
-    //a is the object
-    //b is the target's id
-    //Requires target.items
-    for (var i = a.length - 1; i >= 0; i--) {
-    if(a[i].id == b){
-      console.log(a[i]);
-      return a[i].items;
-      }
-    }
-  }
-
-  function setTextInDiv(a,b,c){
-    //a is the object
-    //b is the target's id
-    //c is the target div
-    //Requires target.display
-    for (var i = a.length - 1; i >= 0; i--) {
-    if(a[i].id == b){
-      $(c).html(a[i].display);
-      console.log(b);
-      return c;
-      }
-    }
-  }
-  
-  var navModuleData = navDataFeed.navModule.items;
-  var navDropDownData = getObject(navModuleData,'dropdown');
-
-  //Nav Bar Visible Elements
-  setTextInDiv(navModuleData,'sitelogo','#navbar-logo');
-  setTextInDiv(navModuleData,'home','#navbar-item0');
-  setTextInDiv(navModuleData,'about','#navbar-item1');
-  setTextInDiv(navModuleData,'contact','#navbar-item2');
-  setTextInDiv(navModuleData,'dropdown','#navbar-dropdown-title');
-
-  //Dropdown Elements
-  setTextInDiv(navDropDownData,'dropdown0','#navbar-dropdown0');
-  setTextInDiv(navDropDownData,'dropdown1','#navbar-dropdown1');
-  setTextInDiv(navDropDownData,'dropdown2','#navbar-dropdown2');
-  setTextInDiv(navDropDownData,'dropdown3','#navbar-dropdown-postdividertitle');
-  setTextInDiv(navDropDownData,'dropdown4','#navbar-dropdown-postdivider0');
-  setTextInDiv(navDropDownData,'dropdown5','#navbar-dropdown-postdivider1');
-
-/*
-  $('#navbar-item1').html(navDataFeed.navModule.items[1].display);
-  $('#navbar-item2').html(navDataFeed.navModule.items[2].display);
-  $('#navbar-dropdown0').html(navDataFeed.navModule.items[4].items[0].display);
-  $('#navbar-dropdown1').html(navDataFeed.navModule.items[4].items[1].display);
-  $('#navbar-dropdown2').html(navDataFeed.navModule.items[4].items[2].display);
-  $('#navbar-dropdown-postdividertitle').html("This is a new section in the nav!");
-  $('#navbar-dropdown-postdivider0').html(navDataFeed.navModule.items[4].items[3].display);
-  $('#navbar-dropdown-postdivider1').html(navDataFeed.navModule.items[4].items[4].display);
-*/
+  <script src="js/main.js">
+  //Nav bar population moved to main.js
   </script>
 
   <!-- TEST OUT JSON PARSER -->
