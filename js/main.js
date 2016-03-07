@@ -94,6 +94,45 @@
 
     var carouselData = uxDataFeed.carouselModule.items;
 
-    setHeadline(carouselData,'panel-0','#carousel-panel-0-headline');
-    setBody(carouselData,'panel-0','#carousel-panel-0-body');
-   setButtonText(carouselData,'panel-0','#carousel-panel-0-button-text');
+    setHeadline(carouselData,'panel-0','#carousel-headline-0');
+    setBody(carouselData,'panel-0','#carousel-body-0');
+    setButtonText(carouselData,'panel-0','#carousel-button-text-0');
+
+    setHeadline(carouselData,'panel-1','#carousel-headline-1');
+    setBody(carouselData,'panel-1','#carousel-body-1');
+    setButtonText(carouselData,'panel-1','#carousel-button-text-1');
+
+    setHeadline(carouselData,'panel-2','#carousel-headline-2');
+    setBody(carouselData,'panel-2','#carousel-body-2');
+    setButtonText(carouselData,'panel-2','#carousel-button-text-2');
+
+/*POPULATE MARKETING MODULES via uxDataFeed*/
+
+    var mktgData = uxDataFeed.marketingModule.items;
+
+    setHeadline(mktgData,'mktg-0','#mktg-headline-0');
+    setBody(mktgData,'mktg-0','#mktg-body-0');
+    setButtonText(mktgData,'mktg-0','#mktg-button-text-0');
+
+    setHeadline(mktgData,'mktg-1','#mktg-headline-1');
+    setBody(mktgData,'mktg-1','#mktg-body-1');
+    setButtonText(mktgData,'mktg-1','#mktg-button-text-1');
+
+    setHeadline(mktgData,'mktg-2','#mktg-headline-2');
+    setBody(mktgData,'mktg-2','#mktg-body-2');
+    setButtonText(mktgData,'mktg-2','#mktg-button-text-2');
+
+/*POPULATE FEATURETTES via uxDataFeed*/
+
+    var featData = uxDataFeed.featurettesModule.items;
+
+    setHeadline(featData,'feat-0','#feat-headline-0');
+    setBody(featData,'feat-0','#feat-body-0');
+
+    setHeadline(featData,'feat-1','#feat-headline-1');
+    setBody(featData,'feat-1','#feat-body-1');
+
+    setHeadline(featData,'feat-2','#feat-headline-2');
+    setBody(featData,'feat-2','#feat-body-2');
+
+
