@@ -75,25 +75,70 @@ var uxDataFeed =
 			},
 			{
 				id:"panel-1",
-				headline:"Another example headline",
+				headline:"UXData Panel 1",
 				body:"lorem ipsum dolor cras justo",
 				buttonColorHex:"#FFFFFF",
-				buttonText:"Learn more"
+				buttonText:"Panel 1 Button"
 			},
 			{
 				id:"panel-2",
-				headline:"One more for good measure.",
+				headline:"UXData Panel 2",
 				body:"lorem ipsum dolor cras justo",
 				buttonColorHex:"#000000",
-				buttonText:"Browse gallery"
+				buttonText:"Panel 2 Button"
 			}
 		]
 
 	},
 	marketingModule:{
+		items:[
+			{
+				id:"mktg-0",
+				image:"#insert-URL-here",
+				headline:"UXData Mktg 0",
+				body:"lorem ipsum dolor cras justo",
+				buttonText:"CTA 0"
+			},
+			{
+				id:"mktg-1",
+				image:"#insert-URL-here",
+				headline:"UXData Mktg 1",
+				body:"lorem ipsum dolor cras justo",
+				buttonText:"CTA 1"
+			},
+			{
+				id:"mktg-2",
+				image:"#insert-URL-here",
+				headline:"UXData Mktg 2",
+				body:"lorem ipsum dolor cras justo",
+				buttonText:"CTA 2"
+			}
+
+		]
+
 
 	},
 	featurettesModule:{
+		items:[
+			{
+				id:"feat-0",
+				image:"#insert-URL-here",
+				headline:"UXData Feat 0",
+				body:"lorem ipsum dolor cras justo"
+			},
+			{
+				id:"feat-1",
+				image:"#insert-URL-here",
+				headline:"UXData Feat 1",
+				body:"lorem ipsum dolor cras justo"
+			},
+			{
+				id:"feat-2",
+				image:"#insert-URL-here",
+				headline:"UXData Feat 2",
+				body:"lorem ipsum dolor cras justo"
+			}
+		]
 
 	}
 }
