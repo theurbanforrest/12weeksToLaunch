@@ -1,5 +1,7 @@
-//main.js
-//All of the main page functions
+/*
+main.js
+All of the main page functions
+*/
 
 
 /*HELPER FUNCTIONS*/
