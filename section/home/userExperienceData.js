@@ -10,16 +10,19 @@ var uxDataFeed =
 	navModule:{
 		items:[
 			{
-				id:"sitelogo",
-				display:"UXData.json Project Name"
+				id:"sitelogo",		
+				display:"UXData.json Project Name",
+				url: "insert-URL-here"
 			},
 			{
 				id:"home",
-				display:"UXData.json Home"
+				display:"UXData.json Home",
+				url: "index-theUrbanForrest.html"
 			},
 			{
 				id:"about",
-				display:"UXData.json About"
+				display:"UXData.json News",
+				url: "article-feed-theUrbanForrest.html"
 			},
 
 			{

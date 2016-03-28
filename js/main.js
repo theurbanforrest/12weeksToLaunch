@@ -3,6 +3,9 @@ main.js
 All of the main page functions
 */
 
+//FOR SPLASH PAGE ONLY
+//Update .row to include margin-top: 25% for spacing
+     $(".col-lg-4").css("margin-top","25%");
 
 /*HELPER FUNCTIONS*/
   function getObject(a,b){
@@ -67,6 +70,20 @@ All of the main page functions
     for (var i = a.length - 1; i >= 0; i--) {
     if(a[i].id == b){
       $(c).html(a[i].buttonText);
+      console.log(b);
+      return c;
+      }
+    }
+  }
+
+    function setUrl(a,b,c){
+    //a is the object
+    //b is the target's id
+    //c is the target div
+    //Requires target.url
+    for (var i = a.length - 1; i >= 0; i--) {
+    if(a[i].id == b){
+      $(c).html(a[i].url);
       console.log(b);
       return c;
       }
