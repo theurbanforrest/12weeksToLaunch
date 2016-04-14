@@ -5,7 +5,7 @@ All of the main page functions
 
 //FOR SPLASH PAGE ONLY
 //Update .row to include margin-top: 25% for spacing
-     $(".col-lg-4").css("margin-top","25%");
+     $(".row").css("margin-top","25%");
 
 /*HELPER FUNCTIONS*/
   function getObject(a,b){
@@ -91,7 +91,7 @@ All of the main page functions
   }
 
 /*POPULATE NAV BAR via uxDataFeed*/
-  var navData = uxDataFeed.navModule.items;
+  var navData = uxDataFeed.responseJSON.navModule.items;
   var navDropDownData = getObject(navData,'dropdown');
 
   //Nav Bar Visible Elements

@@ -27,9 +27,7 @@ j=d.createElement(s),dl=l!='navDataFeed'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
-  <!-- IMPORT DATA -->
-    <script type="text/javascript" language="javascript"
-    src="section/home/userExperienceData.js"></script>
+
 
   <!-- UPPER NAV BAR -->
 <div class="navbar-wrapper">
@@ -220,28 +218,29 @@ j=d.createElement(s),dl=l!='navDataFeed'?'&l='+l:'';j.async=true;j.src=
   <link href="css/example-theme-Carousel.css" rel="stylesheet">
 
   <!-- Include js -->
-  <script src="js/vendor/jquery-1.12.0.min.js"></script>
-  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  
-  <!-- Test if userExperienceData.js replaces nav bar cell appropriately -->
-  <script src="js/main.js">
-  //Nav bar population moved to main.js
-  </script>
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/plugins.js"></script>
 
-  <!-- TEST OUT JSON PARSER -->
-
+  <!-- IMPORT DATA -->
   <script>
-
-    $(document).ready(function(e){
-
-      });
-
-    function jsonCallback(jsonObject){
-      alert(jsonObject.start.count);
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "http://urbanforrest.co/section/home/userExperienceData.json",
+      "method": "GET",
+      "headers": {
+      "cache-control": "no-cache",
+      "postman-token": "f4fbbddd-12db-9239-9759-42f7adb8ea89"
+      }
     }
+    var uxDataFeed = $.ajax(settings).done(function (response) {
+      return response;
+      });
   </script>
+  <!-- Run script to replace fields -->
+  <script src="js/main.js"></script>
 
 <!-- ANALYTICS -->
 
