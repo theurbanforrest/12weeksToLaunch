@@ -6,32 +6,32 @@
 		"items":[
 			{
 				"id":"sitelogo",		
-				"display":"UXData.json Project Name",
+				"display":"@theUrbanForrest",
 				"url": "insert-URL-here"
 			},
 			{
 				"id":"home",
-				"display":"UXData.json Home",
-				"url": "index-theUrbanForrest.html"
+				"display":"Home",
+				"url": "index.html"
 			},
 			{
 				"id":"about",
-				"display":"UXData.json News",
-				"url": "article-feed-theUrbanForrest.html"
+				"display":"Buttons & Colors",
+				"url": "buttonsandcolors.html"
 			},
 
 			{
 				"id":"contact",
-				"display":"UXData.json Contact"
+				"display":"Tech Chops"
 			},
 			{
 				"id":"dropdown",
-				"display":"UXData.json Dropdown",
+				"display":"Drop It Like It's Hot",
 				"items":[
 					{
 						"id":"dropdown0",
-						"display":"Dropdown 0",
-						"target":"#dropdown0"
+						"display":"Stock Quoter",
+						"target":"stockquoter.html"
 					},
 					{
 						"id":"dropdown1",

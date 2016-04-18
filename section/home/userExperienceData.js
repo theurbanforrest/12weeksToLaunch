@@ -56,7 +56,7 @@ var uxDataFeed =
 					{
 						id:"dropdown4",
 						display:"Dropdown 4",
-						target:"#dropdown4"
+						target:"#dropdown4",
 					},
 					{
 						id:"dropdown5",

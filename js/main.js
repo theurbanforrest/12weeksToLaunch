@@ -5,7 +5,7 @@ All of the main page functions
 
 //FOR SPLASH PAGE ONLY
 //Update .row to include margin-top: 25% for spacing
-     $(".row").css("margin-top","25%");
+     $(".col-lg-4").css("margin-top","25%");
 
 /*HELPER FUNCTIONS*/
   function getObject(a,b){
@@ -14,7 +14,7 @@ All of the main page functions
     //Requires target.items
     for (var i = a.length - 1; i >= 0; i--) {
     if(a[i].id == b){
-      console.log(a[i]);
+      //console.log(a[i]);
       return a[i].items;
       }
     }
@@ -28,7 +28,7 @@ All of the main page functions
     for (var i = a.length - 1; i >= 0; i--) {
     if(a[i].id == b){
       $(c).text(a[i].display);
-      console.log(b);
+      //console.log(b);
       return c;
       }
     }
@@ -42,7 +42,7 @@ All of the main page functions
     for (var i = a.length - 1; i >= 0; i--) {
     if(a[i].id == b){
       $(c).text(a[i].headline);
-      console.log(b);
+      //console.log(b);
       return c;
       }
     }
@@ -56,7 +56,7 @@ All of the main page functions
     for (var i = a.length - 1; i >= 0; i--) {
     if(a[i].id == b){
       $(c).text(a[i].body);
-      console.log(b);
+      //console.log(b);
       return c;
       }
     }
@@ -70,7 +70,7 @@ All of the main page functions
     for (var i = a.length - 1; i >= 0; i--) {
     if(a[i].id == b){
       $(c).html(a[i].buttonText);
-      console.log(b);
+      //console.log(b);
       return c;
       }
     }
@@ -84,15 +84,36 @@ All of the main page functions
     for (var i = a.length - 1; i >= 0; i--) {
     if(a[i].id == b){
       $(c).html(a[i].url);
-      console.log(b);
+      //console.log(b);
       return c;
       }
     }
   }
 
-/*POPULATE NAV BAR via uxDataFeed*/
-  var navData = uxDataFeed.responseJSON.navModule.items;
+/*
+GET data and set up feed objects
+*/
+  var settings = {
+    "async": false,
+    "crossDomain": true,
+    "url": "http://urbanforrest.co/section/home/userExperienceData.json",
+    "method": "GET",
+    "headers": {
+    "cache-control": "no-cache",
+    "postman-token": "62a0d0cf-642d-62f8-9474-a4300f2b3f25"
+    }
+  }
+
+  var response = $.ajax(settings);
+    console.log("json returned");
+  uxDataFeed = response.responseJSON;
+    console.log("uxDataFeed complete");
+  navData = uxDataFeed.navModule.items;
   var navDropDownData = getObject(navData,'dropdown');
+
+/*
+Update Nav Bar Elements
+*/
 
   //Nav Bar Visible Elements
   setDisplay(navData,'sitelogo','#navbar-logo');
@@ -109,8 +130,9 @@ All of the main page functions
   setDisplay(navDropDownData,'dropdown4','#navbar-dropdown-postdivider0');
   setDisplay(navDropDownData,'dropdown5','#navbar-dropdown-postdivider1');
 
-/*POPULATE CAROUSEL via uxDataFeed*/
-
+/*
+Update Carousel Elements
+*/
     var carouselData = uxDataFeed.carouselModule.items;
 
     setHeadline(carouselData,'panel-0','#carousel-headline-0');
@@ -125,7 +147,9 @@ All of the main page functions
     setBody(carouselData,'panel-2','#carousel-body-2');
     setButtonText(carouselData,'panel-2','#carousel-button-text-2');
 
-/*POPULATE MARKETING MODULES via uxDataFeed*/
+/*
+Update Marketing Module Elements
+*/
 
     var mktgData = uxDataFeed.marketingModule.items;
 
@@ -141,7 +165,10 @@ All of the main page functions
     setBody(mktgData,'mktg-2','#mktg-body-2');
     setButtonText(mktgData,'mktg-2','#mktg-button-text-2');
 
-/*POPULATE FEATURETTES via uxDataFeed*/
+/*
+Update Featurette ELements
+*/
+
 
     var featData = uxDataFeed.featurettesModule.items;
 
