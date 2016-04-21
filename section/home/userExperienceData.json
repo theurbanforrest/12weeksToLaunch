@@ -16,13 +16,14 @@
 			},
 			{
 				"id":"about",
-				"display":"Buttons & Colors",
-				"url": "buttonsandcolors.html"
+				"display":"Tech Chops",
+				"url": "techchops.html"
 			},
 
 			{
 				"id":"contact",
-				"display":"Tech Chops"
+				"display":"Dodgers Updater",
+				"url" : "dodgers_game_day.html"
 			},
 			{
 				"id":"dropdown",
@@ -35,8 +36,8 @@
 					},
 					{
 						"id":"dropdown1",
-						"display":"Dropdown 1",
-						"target":"#dropdown1"
+						"display":"Bootstrap Stylin'",
+						"target":"exampleBootstrap.html"
 					},
 					{
 						"id":"dropdown2",

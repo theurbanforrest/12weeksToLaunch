@@ -1,0 +1,118 @@
+<!--
+UNIVERSAL NAV
+Requires jQuery
+-->
+
+<!--
+====================
+Base
+====================
+-->
+  <div class="navbar-wrapper">
+  <script>
+    var isThisUniversal = "yes!";
+  </script>
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><div id="navbar-logo">Project Timeline</div></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a id="link-nav0" href="index.html"><div id="navbar-item0">Home</div></a></li>
+                <li><a id="link-nav1" href="techchops.html"><div id="navbar-item1">About</div></a></li>
+                <li><a id="link-nav2" href="dodgers_game_day.html"><div id="navbar-item2">Contact</div></a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><div id="navbar-dropdown-title">Dropdown</div><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="stockquoter.html"><div id="navbar-dropdown0">Action</div></a></li>
+                    <li><a href="exampleBootstrap.html"><div id="navbar-dropdown1">Another action</div></a></li>
+                    <li><a href="#"><div id="navbar-dropdown2">Something else here</div></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header"><div id="navbar-dropdown-postdividertitle">Nav header</dive></li>
+                    <li><a href="#"><div id="navbar-dropdown-postdivider0">Separated link</div></a></li>
+                    <li><a href="#"><div id="navbar-dropdown-postdivider1">One more separated link</div></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  </div>
+
+<script>
+  /*HELPER FUNCTIONS*/
+  function getObject(a,b){
+    //a is the object
+    //b is the target's id
+    //Requires target.items
+    for (var i = a.length - 1; i >= 0; i--) {
+    if(a[i].id == b){
+      //console.log(a[i]);
+      return a[i].items;
+      }
+    }
+  }
+
+  function setNav(a,b,c){
+    //a is the object
+    //b is the object's id
+    //c is the target div
+    //Requires target.display
+    for (var i = a.length - 1; i >= 0; i--) {
+    if(a[i].id == b){
+      $(c).text(a[i].display);
+      //console.log(b);
+      return c;
+      }
+    }
+  }
+
+/*
+GET data and set up feed objects
+*/
+  var settings = {
+    "async": false,
+    "crossDomain": true,
+    "url": "http://urbanforrest.co/section/home/userExperienceData.json",
+    "method": "GET",
+    "headers": {
+    "cache-control": "no-cache",
+    "postman-token": "62a0d0cf-642d-62f8-9474-a4300f2b3f25"
+    }
+  }
+
+  var response = $.ajax(settings);
+    console.log("json returned");
+  uxDataFeed = response.responseJSON;
+    console.log("uxDataFeed complete");
+  navData = uxDataFeed.navModule.items;
+  var navDropDownData = getObject(navData,'dropdown');
+
+/*
+Update Nav Bar Elements
+*/
+
+  //Nav Bar Visible Elements
+  setNav(navData,'sitelogo','#navbar-logo');
+  setNav(navData,'home','#navbar-item0');
+  setNav(navData,'about','#navbar-item1');
+  setNav(navData,'contact','#navbar-item2');
+  setNav(navData,'dropdown','#navbar-dropdown-title');
+
+  //Dropdown Elements
+  setNav(navDropDownData,'dropdown0','#navbar-dropdown0');
+  setNav(navDropDownData,'dropdown1','#navbar-dropdown1');
+  setNav(navDropDownData,'dropdown2','#navbar-dropdown2');
+  setNav(navDropDownData,'dropdown3','#navbar-dropdown-postdividertitle');
+  setNav(navDropDownData,'dropdown4','#navbar-dropdown-postdivider0');
+  setNav(navDropDownData,'dropdown5','#navbar-dropdown-postdivider1');
+</script>
